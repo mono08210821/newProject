@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <button class="btn">버튼</button>
+    <div class="here"></div>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+//         ajax 코드로 http 요청을 만들어내는방법
+
+        $(".btn").click(function(){
+
+            axios.get("/ajax").then(function(response) {
+
+                // 요청후 받은 데이터가 배열이라 반복문돌면서 추가중
+                for(var i = 0; i < response.data.length; i++){
+                    $(".here").append("<div>" + response.data[i] + "</div>")
+                }
+            })
+
+        })
+
+             /* 원래는 이건데 axios 라이브러리를 써서 http 요청을 만들어내는중
+            var xhr = new XMLHttpRequest();
+
+            xhr.addEventListener("load", function reqListener () {
+                $(".here").append(this.responseText)
+            });
+
+            xhr.open("GET", "/ajax");
+            xhr.send();
+
+            */
+
+    </script>
+</body>
+</html>
