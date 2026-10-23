@@ -16,6 +16,7 @@ jobs:
     timeout-minutes: 45
     defaults:
       run:
+        shell: bash
         working-directory: nowmark
     steps:
       - uses: actions/checkout@v4
@@ -85,7 +86,8 @@ jobs:
         run: |
           out="$RUNNER_TEMP/builds"; mkdir -p "$out"
           cp app/build/outputs/apk/debug/*.apk app/build/outputs/apk/release/*.apk app/build/outputs/bundle/release/*.aab "$out"/ 2>/dev/null || true
-          cp app/build/outputs/mapping/release/mapping.txt "$out"/ 2>/dev/null || true
+          cp app/build/outputs/mapping/release/mapping.txt "$RUNNER_TEMP/gradle.log" "$out"/ 2>/dev/null || true
+          cp app/build/reports/lint-results-debug.txt "$out"/ 2>/dev/null || true
           [ -n "$(ls -A "$out")" ] || exit 0
           cd "$out"
           echo "${GITHUB_SHA}" > SOURCE_COMMIT.txt
