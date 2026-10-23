@@ -45,7 +45,7 @@ android {
         create("release") {
             val storePath = signingValue("storeFile", "NOWMARK_KEYSTORE_PATH")
             if (storePath != null) {
-                storeFile = file(storePath)
+                storeFile = rootProject.file(storePath)
                 storePassword = signingValue("storePassword", "NOWMARK_KEYSTORE_PASSWORD")
                 keyAlias = signingValue("keyAlias", "NOWMARK_KEY_ALIAS")
                 keyPassword = signingValue("keyPassword", "NOWMARK_KEY_PASSWORD")

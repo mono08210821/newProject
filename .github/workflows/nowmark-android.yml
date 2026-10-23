@@ -7,6 +7,9 @@ on:
     paths: ["nowmark/**", ".github/workflows/nowmark-android.yml"]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-24.04
@@ -66,13 +69,31 @@ jobs:
       - name: Release config check (no test ad IDs in release)
         run: |
           set -e
+          ls -la app/build/outputs/apk/release/
           apk=$(ls app/build/outputs/apk/release/*.apk | head -1)
+          unzip -l "$apk" | grep dex
           unzip -p "$apk" 'classes*.dex' | strings > "$RUNNER_TEMP/dex.txt"
+          echo "::notice::dex strings: $(wc -l < "$RUNNER_TEMP/dex.txt"), ca-app-pub lines: $(grep -c ca-app-pub "$RUNNER_TEMP/dex.txt" || true) $(grep ca-app-pub "$RUNNER_TEMP/dex.txt" | head -5 | tr '\n' ' ')"
           grep -q "ca-app-pub-9374713455776239/4308791882" "$RUNNER_TEMP/dex.txt"
           if grep -q "ca-app-pub-3940256099942544" "$RUNNER_TEMP/dex.txt"; then
             echo "Test ad unit found in release build"; exit 1
           fi
           echo "Release uses the real ad units only."
+
+      - name: Publish build outputs to the nowmark-builds branch
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          out="$RUNNER_TEMP/builds"; mkdir -p "$out"
+          cp app/build/outputs/apk/debug/*.apk app/build/outputs/apk/release/*.apk app/build/outputs/bundle/release/*.aab "$out"/ 2>/dev/null || true
+          cp app/build/outputs/mapping/release/mapping.txt "$out"/ 2>/dev/null || true
+          [ -n "$(ls -A "$out")" ] || exit 0
+          cd "$out"
+          echo "${GITHUB_SHA}" > SOURCE_COMMIT.txt
+          git init -q -b nowmark-builds
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "Nowmark build for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" nowmark-builds
 
       - uses: actions/upload-artifact@v4
         if: always()
