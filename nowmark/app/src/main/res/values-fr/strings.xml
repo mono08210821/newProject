@@ -49,7 +49,7 @@
     <string name="empty_search_body">Essayez un autre mot. La recherche porte sur les titres et les notes.</string>
     <string name="export_done">Enregistrements exportés : %1$d</string>
     <string name="export_failed">Échec de l\'export. Rien n\'a été modifié.</string>
-    <string name="export_missing">Audio introuvable pour %1$d enregistrements ; seules leurs infos ont été incluses.</string>
+    <string name="export_missing">Enregistrements sans audio : %1$d. Seules leurs infos ont été incluses.</string>
     <string name="failed_title">Un problème est survenu</string>
     <string name="failed_start">Impossible de démarrer le micro. Une autre app l\'utilise peut-être. Réessayez.</string>
     <string name="failed_storage">Le stockage est plein. Ce qui a été écrit est conservé et peut être enregistré depuis Récupération.</string>
@@ -96,7 +96,7 @@
     <string name="library_title">Mes enregistrements</string>
     <string name="library_sub">Là où s\'accumulent les paroles du jour.</string>
     <string name="listen">Écouter</string>
-    <string name="listen_highlights">Écouter %1$d passages · %2$s</string>
+    <string name="listen_highlights">Écouter les moments clés (%1$d) · %2$s</string>
     <string name="location_private_note">Sur cette version d\'Android, les enregistrements sont stockés dans le dossier propre à l\'app et supprimés si vous la désinstallez. Exportez un ZIP pour en garder une copie.</string>
     <string name="mark_added">Marqué. L\'enregistrement continue.</string>
     <string name="mark_now">C\'était important</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">L\'achat n\'a pas pu aboutir. Réessayez.</string>
     <string name="purchase_pending">Paiement en attente. Les annonces seront supprimées dès que Google Play l\'aura confirmé.</string>
     <string name="purchase_success">Merci ! Les annonces sont supprimées.</string>
-    <string name="range_end">Fin</string>
-    <string name="range_start">Début</string>
+    <string name="mark_range_end">Fin</string>
+    <string name="mark_range_start">Début</string>
     <string name="record_idle_title">Prêt à enregistrer</string>
     <string name="record_idle_sub">Quand quelque chose compte, appuyez sur « C\'était important ».</string>
     <string name="recover_discard">Abandonner</string>

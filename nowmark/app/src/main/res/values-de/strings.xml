@@ -49,7 +49,7 @@
     <string name="empty_search_body">Versuch ein anderes Wort. Titel und Notizen werden durchsucht.</string>
     <string name="export_done">Exportierte Aufnahmen: %1$d</string>
     <string name="export_failed">Export fehlgeschlagen. Nichts wurde geändert.</string>
-    <string name="export_missing">Für %1$d Aufnahmen fehlt die Audiodatei; nur ihre Angaben wurden aufgenommen.</string>
+    <string name="export_missing">Aufnahmen ohne Audiodatei: %1$d. Nur ihre Angaben wurden aufgenommen.</string>
     <string name="failed_title">Etwas ist schiefgelaufen</string>
     <string name="failed_start">Das Mikrofon konnte nicht gestartet werden. Eventuell nutzt es eine andere App. Bitte versuch es erneut.</string>
     <string name="failed_storage">Der Speicher ist voll. Das bisher Geschriebene bleibt erhalten und kann unter Wiederherstellung gespeichert werden.</string>
@@ -96,7 +96,7 @@
     <string name="library_title">Meine Aufnahmen</string>
     <string name="library_sub">Hier sammeln sich die Worte von heute.</string>
     <string name="listen">Anhören</string>
-    <string name="listen_highlights">%1$d Abschnitte anhören · %2$s</string>
+    <string name="listen_highlights">Wichtige Stellen anhören (%1$d) · %2$s</string>
     <string name="location_private_note">Unter dieser Android-Version werden Aufnahmen im eigenen Ordner der App gespeichert und beim Deinstallieren gelöscht. Exportiere ein ZIP, um eine Kopie zu behalten.</string>
     <string name="mark_added">Markiert. Die Aufnahme läuft weiter.</string>
     <string name="mark_now">Das war wichtig</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">Der Kauf konnte nicht abgeschlossen werden. Bitte versuch es erneut.</string>
     <string name="purchase_pending">Zahlung ausstehend. Die Werbung wird entfernt, sobald Google Play sie bestätigt.</string>
     <string name="purchase_success">Danke! Die Werbung ist entfernt.</string>
-    <string name="range_end">Ende</string>
-    <string name="range_start">Anfang</string>
+    <string name="mark_range_end">Ende</string>
+    <string name="mark_range_start">Anfang</string>
     <string name="record_idle_title">Bereit zum Aufnehmen</string>
     <string name="record_idle_sub">Wenn etwas wichtig ist, tippe auf „Das war wichtig“.</string>
     <string name="recover_discard">Verwerfen</string>

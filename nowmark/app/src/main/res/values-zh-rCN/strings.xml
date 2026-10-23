@@ -49,7 +49,7 @@
     <string name="empty_search_body">换个词试试。会搜索标题和备注。</string>
     <string name="export_done">已导出%1$d条录音。</string>
     <string name="export_failed">导出失败，未做任何更改。</string>
-    <string name="export_missing">%1$d条录音找不到音频文件，只包含了其信息。</string>
+    <string name="export_missing">找不到音频文件的录音：%1$d。只包含了其信息。</string>
     <string name="failed_title">出现问题</string>
     <string name="failed_start">无法启动麦克风，可能有其他应用正在使用。请重试。</string>
     <string name="failed_storage">存储空间已满。已写入的部分已保留，可在“恢复”中保存。</string>
@@ -96,7 +96,7 @@
     <string name="library_title">我的记录</string>
     <string name="library_sub">今天说过的话都在这里。</string>
     <string name="listen">收听</string>
-    <string name="listen_highlights">播放%1$d个重要片段 · %2$s</string>
+    <string name="listen_highlights">播放重要片段（%1$d）· %2$s</string>
     <string name="location_private_note">在此 Android 版本上，录音保存在应用专属文件夹中，卸载应用时会一并删除。请导出 ZIP 保留副本。</string>
     <string name="mark_added">已标记，录音继续。</string>
     <string name="mark_now">刚才很重要</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">无法完成购买，请重试。</string>
     <string name="purchase_pending">付款待处理。Google Play 确认后将移除广告。</string>
     <string name="purchase_success">感谢支持！广告已移除。</string>
-    <string name="range_end">结束</string>
-    <string name="range_start">开始</string>
+    <string name="mark_range_end">结束</string>
+    <string name="mark_range_start">开始</string>
     <string name="record_idle_title">准备好录音了</string>
     <string name="record_idle_sub">听到重要内容时，点“刚才很重要”。</string>
     <string name="recover_discard">丢弃</string>

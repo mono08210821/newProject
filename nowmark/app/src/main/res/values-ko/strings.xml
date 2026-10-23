@@ -49,7 +49,7 @@
     <string name="empty_search_body">다른 단어로 찾아보세요. 제목과 메모에서 찾아요.</string>
     <string name="export_done">녹음 %1$d개를 내보냈어요.</string>
     <string name="export_failed">내보내지 못했어요. 바뀐 것은 없어요.</string>
-    <string name="export_missing">%1$d개 녹음은 오디오 파일을 찾지 못해 정보만 담았어요.</string>
+    <string name="export_missing">오디오 파일을 찾지 못한 녹음: %1$d. 정보만 담았어요.</string>
     <string name="failed_title">문제가 생겼어요</string>
     <string name="failed_start">마이크를 시작하지 못했어요. 다른 앱이 마이크를 사용 중일 수 있어요. 다시 시도해 주세요.</string>
     <string name="failed_storage">저장 공간이 부족해요. 지금까지 기록된 부분은 보관했고 복구 화면에서 저장할 수 있어요.</string>
@@ -96,7 +96,7 @@
     <string name="library_title">나의 기록</string>
     <string name="library_sub">오늘의 말이 쌓이는 곳.</string>
     <string name="listen">듣기</string>
-    <string name="listen_highlights">중요 구간 %1$d개 듣기 · %2$s</string>
+    <string name="listen_highlights">중요 구간 듣기 (%1$d) · %2$s</string>
     <string name="location_private_note">이 Android 버전에서는 앱 전용 폴더에 저장돼 앱을 삭제하면 함께 지워져요. 보관하려면 ZIP으로 내보내세요.</string>
     <string name="mark_added">표시했어요. 녹음은 계속돼요.</string>
     <string name="mark_now">방금 중요했어요</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">구매를 완료하지 못했어요. 다시 시도해 주세요.</string>
     <string name="purchase_pending">결제 대기 중이에요. Google Play에서 확인되면 광고가 제거돼요.</string>
     <string name="purchase_success">감사합니다! 광고가 제거됐어요.</string>
-    <string name="range_end">끝</string>
-    <string name="range_start">시작</string>
+    <string name="mark_range_end">끝</string>
+    <string name="mark_range_start">시작</string>
     <string name="record_idle_title">녹음할 준비가 됐어요</string>
     <string name="record_idle_sub">중요한 말이 나오면 “방금 중요했어요”를 누르세요.</string>
     <string name="recover_discard">버리기</string>

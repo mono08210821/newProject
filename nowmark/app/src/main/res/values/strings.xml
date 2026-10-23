@@ -50,7 +50,7 @@
     <string name="empty_search_body">Try another word. Titles and memos are searched.</string>
     <string name="export_done">Recordings exported: %1$d</string>
     <string name="export_failed">Export failed. Nothing was changed.</string>
-    <string name="export_missing">Audio not found for %1$d recordings; only their details were included.</string>
+    <string name="export_missing">Recordings without audio: %1$d. Only their details were included.</string>
     <string name="failed_title">Something went wrong</string>
     <string name="failed_start">The microphone couldn\'t start. Another app may be using it. Please try again.</string>
     <string name="failed_storage">Storage is full. What was written so far is kept and can be saved from Recovery.</string>
@@ -97,7 +97,7 @@
     <string name="library_title">My recordings</string>
     <string name="library_sub">Where today\'s words pile up.</string>
     <string name="listen">Listen</string>
-    <string name="listen_highlights">Play %1$d sections · %2$s</string>
+    <string name="listen_highlights">Play highlights (%1$d) · %2$s</string>
     <string name="location_private_note">On this Android version, recordings are saved in the app\'s own folder and are removed if the app is uninstalled. Export a ZIP to keep a copy.</string>
     <string name="mark_added">Marked. Recording continues.</string>
     <string name="mark_now">That was important</string>
@@ -144,8 +144,8 @@
     <string name="purchase_error">The purchase couldn\'t be completed. Please try again.</string>
     <string name="purchase_pending">Payment is pending. Ads will be removed once Google Play confirms it.</string>
     <string name="purchase_success">Thank you! Ads are removed.</string>
-    <string name="range_end">End</string>
-    <string name="range_start">Start</string>
+    <string name="mark_range_end">End</string>
+    <string name="mark_range_start">Start</string>
     <string name="record_idle_title">Ready to record</string>
     <string name="record_idle_sub">When something matters, tap “That was important”.</string>
     <string name="recover_discard">Discard</string>

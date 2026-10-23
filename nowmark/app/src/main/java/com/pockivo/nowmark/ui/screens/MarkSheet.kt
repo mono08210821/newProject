@@ -85,10 +85,10 @@ fun MarkSheet(
             )
             Spacer(Modifier.height(16.dp))
             Text(stringResource(R.string.section_range), style = MaterialTheme.typography.labelLarge, color = Nm.c.inkSoft)
-            AdjustRow(stringResource(R.string.range_start), start,
+            AdjustRow(stringResource(R.string.mark_range_start), start,
                 onMinus = { start = (start - 5_000).coerceAtLeast(0) },
                 onPlus = { start = (start + 5_000).coerceAtMost(end - 1_000) })
-            AdjustRow(stringResource(R.string.range_end), end,
+            AdjustRow(stringResource(R.string.mark_range_end), end,
                 onMinus = { end = (end - 5_000).coerceAtLeast(start + 1_000) },
                 onPlus = { end = (end + 5_000).coerceAtMost(duration) })
             Spacer(Modifier.height(8.dp))

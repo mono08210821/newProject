@@ -49,7 +49,7 @@
     <string name="empty_search_body">جرّب كلمة أخرى. يشمل البحث العناوين والملاحظات.</string>
     <string name="export_done">التسجيلات المُصدَّرة: %1$d</string>
     <string name="export_failed">تعذّر التصدير. لم يتغيّر شيء.</string>
-    <string name="export_missing">لم يُعثر على صوت %1$d من التسجيلات؛ أُدرجت بياناتها فقط.</string>
+    <string name="export_missing">تسجيلات بلا صوت: %1$d. أُدرجت بياناتها فقط.</string>
     <string name="failed_title">حدث خطأ</string>
     <string name="failed_start">تعذّر تشغيل الميكروفون. ربما يستخدمه تطبيق آخر. حاول مرة أخرى.</string>
     <string name="failed_storage">مساحة التخزين ممتلئة. تم الاحتفاظ بما كُتب حتى الآن ويمكن حفظه من شاشة الاستعادة.</string>
@@ -96,7 +96,7 @@
     <string name="library_title">تسجيلاتي</string>
     <string name="library_sub">حيث تتجمّع كلمات اليوم.</string>
     <string name="listen">استماع</string>
-    <string name="listen_highlights">تشغيل %1$d مقاطع · %2$s</string>
+    <string name="listen_highlights">تشغيل المقاطع المهمة (%1$d) · %2$s</string>
     <string name="location_private_note">في إصدار Android هذا تُحفظ التسجيلات في مجلد التطبيق الخاص وتُحذف عند إلغاء تثبيته. صدّر ملف ZIP للاحتفاظ بنسخة.</string>
     <string name="mark_added">تم وضع العلامة. التسجيل مستمر.</string>
     <string name="mark_now">كان ذلك مهمًا</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">تعذّر إكمال الشراء. حاول مرة أخرى.</string>
     <string name="purchase_pending">الدفع قيد الانتظار. ستُزال الإعلانات بعد تأكيد Google Play.</string>
     <string name="purchase_success">شكرًا لك! تمت إزالة الإعلانات.</string>
-    <string name="range_end">النهاية</string>
-    <string name="range_start">البداية</string>
+    <string name="mark_range_end">النهاية</string>
+    <string name="mark_range_start">البداية</string>
     <string name="record_idle_title">جاهز للتسجيل</string>
     <string name="record_idle_sub">عندما يقال شيء مهم، اضغط «كان ذلك مهمًا».</string>
     <string name="recover_discard">تجاهل</string>

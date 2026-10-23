@@ -49,7 +49,7 @@
     <string name="empty_search_body">कोई दूसरा शब्द आज़माएँ। शीर्षक और नोट में खोजा जाता है।</string>
     <string name="export_done">एक्सपोर्ट की गई रिकॉर्डिंग: %1$d</string>
     <string name="export_failed">एक्सपोर्ट नहीं हो सका। कुछ नहीं बदला।</string>
-    <string name="export_missing">%1$d रिकॉर्डिंग की ऑडियो फ़ाइल नहीं मिली; सिर्फ़ उनकी जानकारी शामिल की गई।</string>
+    <string name="export_missing">बिना ऑडियो वाली रिकॉर्डिंग: %1$d. सिर्फ़ उनकी जानकारी शामिल की गई।</string>
     <string name="failed_title">कुछ गड़बड़ हो गई</string>
     <string name="failed_start">माइक शुरू नहीं हो सका। शायद कोई दूसरा ऐप इसे इस्तेमाल कर रहा है। फिर कोशिश करें।</string>
     <string name="failed_storage">स्टोरेज भर गया है। अब तक लिखा हिस्सा रखा गया है और रिकवरी से सेव किया जा सकता है।</string>
@@ -96,7 +96,7 @@
     <string name="library_title">मेरी रिकॉर्डिंग</string>
     <string name="library_sub">जहाँ आज की बातें जमा होती हैं।</string>
     <string name="listen">सुनें</string>
-    <string name="listen_highlights">%1$d हिस्से सुनें · %2$s</string>
+    <string name="listen_highlights">ज़रूरी हिस्से सुनें (%1$d) · %2$s</string>
     <string name="location_private_note">इस Android वर्शन पर रिकॉर्डिंग ऐप के अपने फ़ोल्डर में सेव होती हैं और ऐप हटाने पर मिट जाती हैं। कॉपी रखने के लिए ZIP एक्सपोर्ट करें।</string>
     <string name="mark_added">चिह्न लग गया। रिकॉर्डिंग जारी है।</string>
     <string name="mark_now">यह ज़रूरी था</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">खरीद पूरी नहीं हो सकी। फिर कोशिश करें।</string>
     <string name="purchase_pending">भुगतान बाकी है। Google Play से पुष्टि होते ही विज्ञापन हट जाएँगे।</string>
     <string name="purchase_success">धन्यवाद! विज्ञापन हट गए हैं।</string>
-    <string name="range_end">अंत</string>
-    <string name="range_start">शुरुआत</string>
+    <string name="mark_range_end">अंत</string>
+    <string name="mark_range_start">शुरुआत</string>
     <string name="record_idle_title">रिकॉर्ड करने के लिए तैयार</string>
     <string name="record_idle_sub">कुछ ज़रूरी हो तो “यह ज़रूरी था” दबाएँ।</string>
     <string name="recover_discard">छोड़ें</string>

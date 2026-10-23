@@ -49,7 +49,7 @@
     <string name="empty_search_body">Tente outra palavra. A busca inclui títulos e notas.</string>
     <string name="export_done">Gravações exportadas: %1$d</string>
     <string name="export_failed">Não foi possível exportar. Nada foi alterado.</string>
-    <string name="export_missing">Áudio não encontrado para %1$d gravações; só os dados foram incluídos.</string>
+    <string name="export_missing">Gravações sem áudio: %1$d. Só os dados foram incluídos.</string>
     <string name="failed_title">Algo deu errado</string>
     <string name="failed_start">Não foi possível iniciar o microfone. Outro app pode estar usando. Tente novamente.</string>
     <string name="failed_storage">O armazenamento está cheio. O que foi gravado até agora foi mantido e pode ser salvo em Recuperação.</string>
@@ -96,7 +96,7 @@
     <string name="library_title">Minhas gravações</string>
     <string name="library_sub">Onde as falas de hoje se acumulam.</string>
     <string name="listen">Ouvir</string>
-    <string name="listen_highlights">Ouvir %1$d trechos · %2$s</string>
+    <string name="listen_highlights">Ouvir destaques (%1$d) · %2$s</string>
     <string name="location_private_note">Nesta versão do Android, as gravações ficam na pasta do próprio app e são apagadas se o app for desinstalado. Exporte um ZIP para manter uma cópia.</string>
     <string name="mark_added">Marcado. A gravação continua.</string>
     <string name="mark_now">Isso foi importante</string>
@@ -143,8 +143,8 @@
     <string name="purchase_error">Não foi possível concluir a compra. Tente novamente.</string>
     <string name="purchase_pending">Pagamento pendente. Os anúncios serão removidos quando o Google Play confirmar.</string>
     <string name="purchase_success">Obrigado! Os anúncios foram removidos.</string>
-    <string name="range_end">Fim</string>
-    <string name="range_start">Início</string>
+    <string name="mark_range_end">Fim</string>
+    <string name="mark_range_start">Início</string>
     <string name="record_idle_title">Pronto para gravar</string>
     <string name="record_idle_sub">Quando algo importar, toque em “Isso foi importante”.</string>
     <string name="recover_discard">Descartar</string>
