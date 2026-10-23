@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <!-- "N" -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M38,36h7.5l17,24.5V36H70v36h-7.5L45.5,47.5V72H38z" />
+    <!-- bookmark notch -->
+    <path android:fillColor="#F6E4E8"
+        android:pathData="M64,30h10v14l-5,-3.5l-5,3.5z" />
+</vector>
