@@ -50,7 +50,18 @@ jobs:
           NOWMARK_KEY_ALIAS: ${{ secrets.NOWMARK_KEY_ALIAS }}
           NOWMARK_KEY_PASSWORD: ${{ secrets.NOWMARK_KEY_PASSWORD }}
           NOWMARK_PLAY_LICENSE_KEY: ${{ secrets.NOWMARK_PLAY_LICENSE_KEY }}
-        run: ./gradlew --stacktrace testDebugUnitTest lintDebug assembleDebug bundleRelease assembleRelease
+        run: ./gradlew --continue testDebugUnitTest lintDebug assembleDebug bundleRelease assembleRelease 2>&1 | tee "$RUNNER_TEMP/gradle.log"
+
+      - name: Surface build errors as annotations
+        if: failure()
+        run: |
+          grep -E "^e: |^w: .*error|: error:|Error: |FAILED|What went wrong|> .*(failed|Could not)|Lint found|\.kt:[0-9]+" "$RUNNER_TEMP/gradle.log" \
+            | grep -v "^w: " | head -60 | while IFS= read -r line; do echo "::error::${line//%/%25}"; done
+          for f in app/build/test-results/testDebugUnitTest/*.xml; do
+            grep -A3 "<failure" "$f" 2>/dev/null | head -8 | while IFS= read -r line; do echo "::error::${line//%/%25}"; done
+          done
+          grep -h -B1 -A2 'severity="Error"' app/build/reports/lint-results-debug.xml 2>/dev/null | grep -E "message=|file=" | head -40 \
+            | while IFS= read -r line; do echo "::error::${line//%/%25}"; done
 
       - name: Release config check (no test ad IDs in release)
         run: |
