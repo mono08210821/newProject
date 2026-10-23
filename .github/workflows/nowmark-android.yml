@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     defaults:
       run:
@@ -22,10 +22,11 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - uses: android-actions/setup-android@v3
-
-      - name: Install SDK packages
-        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+      - name: Install SDK packages (runner's preinstalled Android SDK)
+        run: |
+          echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> "$GITHUB_ENV"
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0"
 
       - uses: gradle/actions/setup-gradle@v4
 
@@ -55,8 +56,9 @@ jobs:
         run: |
           set -e
           apk=$(ls app/build/outputs/apk/release/*.apk | head -1)
-          unzip -p "$apk" classes*.dex | strings | grep -q "ca-app-pub-9374713455776239/4308791882"
-          if unzip -p "$apk" classes*.dex | strings | grep -q "ca-app-pub-3940256099942544"; then
+          unzip -p "$apk" 'classes*.dex' | strings > "$RUNNER_TEMP/dex.txt"
+          grep -q "ca-app-pub-9374713455776239/4308791882" "$RUNNER_TEMP/dex.txt"
+          if grep -q "ca-app-pub-3940256099942544" "$RUNNER_TEMP/dex.txt"; then
             echo "Test ad unit found in release build"; exit 1
           fi
           echo "Release uses the real ad units only."

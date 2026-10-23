@@ -76,10 +76,11 @@ object Finalizer {
         }
         var sink: PcmSink? = null
         try {
-            sink = when (format) {
+            val out: PcmSink = when (format) {
                 AudioFormatKind.M4A -> AacSink(pending.pfd.fileDescriptor, journal.sampleRate, journal.channels, preset.aacBitrate)
                 AudioFormatKind.WAV -> WavSink(pending.pfd.fileDescriptor, journal.sampleRate, journal.channels)
             }
+            sink = out
             val buf = ByteArray(256 * 1024)
             for (f in chunkFiles) {
                 val limit = framesOnDisk(f, bpf) * bpf
@@ -89,12 +90,12 @@ object Finalizer {
                         val want = minOf(buf.size.toLong(), limit - read).toInt()
                         val n = input.read(buf, 0, want)
                         if (n <= 0) break
-                        sink.write(buf, 0, n)
+                        out.write(buf, 0, n)
                         read += n
                     }
                 }
             }
-            sink.finish()
+            out.finish()
             sink = null
         } catch (e: Exception) {
             sink?.abort()
